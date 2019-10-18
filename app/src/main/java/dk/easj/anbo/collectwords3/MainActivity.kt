@@ -28,13 +28,13 @@ class MainActivity : AppCompatActivity() {
         mainShowWordsButton.setOnClickListener {
             Log.d("MINE", words.toString())
             //mainMessageTextView.text = words.toString()
-            val intent =  Intent(this, ShowWordsActivity::class.java)
+            val intent = Intent(this, ShowWordsActivity::class.java)
             intent.putExtra(WORDS, words)
             startActivity(intent)
         }
 
         mainShowWordsJavaButton.setOnClickListener {
-            val intent =  Intent(this, ShowWordsJavaActivity::class.java)
+            val intent = Intent(this, ShowWordsJavaActivity::class.java)
             intent.putExtra(WORDS, words)
             startActivity(intent)
         }

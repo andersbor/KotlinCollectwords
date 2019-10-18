@@ -11,7 +11,7 @@ class ShowWordsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_words)
-        val intent = getIntent()
+        //val intent = getIntent()
 
         val words = intent.getStringArrayListExtra(WORDS)
         showWordsMessageTextView.text = words.toString()
