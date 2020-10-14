@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         mainSaveWordButton.setOnClickListener {
             Log.d("MINE", words.toString())
-            val newWord = mainWordEditText.text.toString()
+            val newWord: String = mainWordEditText.text.toString()
             words.add(newWord)
             Log.d("MINE", words.toString())
         }
