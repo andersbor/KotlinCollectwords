@@ -4,11 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private var words = ArrayList<String>()
+    private val words = ArrayList<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,9 +22,9 @@ class MainActivity : AppCompatActivity() {
             Log.d("MINE", words.toString())
         }
 
-        mainClearWordsButton.setOnClickListener {
-            words.clear()
-        }
+        /*  mainClearWordsButton.setOnClickListener {
+              words.clear()
+        }*/
 
         mainShowWordsButton.setOnClickListener {
             Log.d("MINE", words.toString())
@@ -38,5 +39,9 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra(WORDS, words)
             startActivity(intent)
         }
+    }
+
+    fun clear(view: View) {
+        words.clear()
     }
 }
